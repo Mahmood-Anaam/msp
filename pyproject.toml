@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=78.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "msp"
+version = "1.0.0"
+description = "multimodal speech perception."
+authors = [
+  { name = "Mahmood Anaam" }
+]
+license = { text = "Apache License 2.0" }
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "python-dotenv==1.2.2",
+    "ffmpeg-python==0.2.0", 
+    "datasets==4.0.0",
+    "torch-summary==1.4.5",
+    "accelerate==1.13.0",
+    "transformers==5.10.2",
+    "mediapipe==0.10.35",
+    "jiwer==4.0.0",
+    "evaluate==0.4.6",
+    "wandb==0.28.0",
+    "tqdm==4.67.3",
+    "gradio==5.50.0",
+    "webvtt-py==0.5.1",
+    "tensorboard==2.21.0",
+    "einops==0.8.2",
+    "decord==0.6.0",
+    "av==18.0.0",
+    "torchdata==0.11.0",
+    "torchcodec==0.11.1",
+]
+
+[project.urls]
+repository = "https://github.com/Mahmood-Anaam/msp"
+
+[project.scripts]
+train = "msp.scripts.train:main"
+evaluate = "msp.scripts.evaluation:main"
+
+[tool.setuptools.packages.find]
+include = ["msp*"]
+

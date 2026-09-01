@@ -1,0 +1,11 @@
+split,wer
+test,0.0630
+test_snr_n5_interferer_1,0.9022
+test_snr_n5_interferer_2,0.9299
+test_snr_0_interferer_1,0.4276
+test_snr_0_interferer_2,0.4286
+test_snr_5_interferer_1,0.4740
+test_snr_5_interferer_2,0.4891
+test_snr_10_interferer_1,0.2252
+test_snr_10_interferer_2,0.2309
+average,0.4634

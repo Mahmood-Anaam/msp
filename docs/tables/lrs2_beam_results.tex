@@ -1,0 +1,64 @@
+\begin{table}[ht]
+\centering
+\caption{WER (\%) of models on the LRS2 dataset. $\bigstar$ denotes our proposed models. "AV" (in the modality column) indicates models that utilize both audio and visual features.}
+
+\label{tab:lrs2-beam-results}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{clccccccccc}
+\hline
+\multirow{2}{*}{Model ID} &
+\multirow{2}{*}{Model} &
+\multirow{2}{*}{Modality} &
+\multirow{2}{*}{Train Dataset} &
+\multirow{2}{*}{Interferer} &
+\multicolumn{5}{c}{SNR (dB)} &
+\multirow{2}{*}{Avg} \\
+\cline{6-10}
+&&&&& -5 & 0 & 5 & 10 & $\infty$ & \\
+\hline
+
+\multirow{3}{*}{A1}
+& \multirow{3}{*}{MSP-ASR $^\bigstar$}
+& \multirow{3}{*}{Audio}
+& \multirow{3}{*}{LRS2, Vox2, AVYT}
+& 0 & & & & & 6.30 & \multirow{3}{*}{46.34} \\
+&&&&1 & 90.22 & 42.76 & 47.40 & 22.52 && \\
+&&&&2 & 92.99 & 42.86 & 48.91 & 23.09 && \\
+\hline
+
+V1
+& MSP-VSR $^\bigstar$
+& Visual
+& LRS2, Vox2, AVYT
+& 0
+&
+&
+&
+27.37
+&
+&
+ \\
+\hline
+
+\multirow{3}{*}{AV1}
+& \multirow{3}{*}{MSP-AVSR $^\bigstar$}
+& \multirow{3}{*}{AV}
+& \multirow{3}{*}{LRS2, Vox2, AVYT}
+& 0 & & & & & 3.93 & \multirow{3}{*}{22.80} \\
+&&&&1 & 48.85 & 20.90 & 22.41 & 12.33 && \\
+&&&&2 & 40.92 & 19.91 & 22.86 & 13.08 && \\
+\hline
+
+\multirow{3}{*}{AV2} & \multirow{3}{*}{Auto-AVSR~\cite{10096889}} & \multirow{3}{*}{AV} & \multirow{3}{*}{LRS2, Vox2, LRS3, AVSpeech} & 0 & & & & & 1.70 & \multirow{3}{*}{21.70} \\
+&&&&1 & 56.6 & 16.6 & 10.3 & 4.2 && \\
+&&&&2 & 69.6 & 21.8 & 11.7 & 3.5 && \\
+\hline
+
+\multirow{3}{*}{AV3} & \multirow{3}{*}{Whisper-Flamingo~\cite{rouditchenko24_interspeech}} & \multirow{3}{*}{AV} & \multirow{3}{*}{LRS3, Vox2} & 0 & & & & & 6.10 & \multirow{3}{*}{40.10} \\
+&&&&1 & 96.9 & 37.4 & 26.2 & 12.1 && \\
+&&&&2 & 99.6 & 38.6 & 30.6 & 13.4 && \\
+\hline
+
+\end{tabular}
+}
+\end{table}

@@ -1,0 +1,38 @@
+\begin{table}[H]
+\centering
+\caption{WER (\%) of models on the AVCocktail dataset}
+\label{tab:avcocktail-beam-results}
+\begin{tabular}{cccc}
+\hline
+\multirow{2}{*}{
+\begin{tabular}[c]{@{}c@{}}
+Recognition\\
+Model\\
+ID
+\end{tabular}}
+& \multicolumn{3}{c}{Segmentation Strategy} \\
+\cline{2-4}
+
+&
+\begin{tabular}[c]{@{}c@{}}
+Active Speaker\\
+Detection \cite{liao2023lightweightmodelactive}
+\end{tabular}
+&
+\begin{tabular}[c]{@{}c@{}}
+Fixed Chunk\\
+(10 s)
+\end{tabular}
+&
+Gold \\
+\hline
+
+A1  & 77.62 & 127.36 & 74.37 \\
+V1  & 58.09 & 74.77 & 58.06 \\
+AV1 & 67.73 & 107.46 & 63.64 \\
+AV2 & 74.60 & 133.20 & 67.80 \\
+AV3 & 70.80 & 133.30 & 58.30 \\
+
+\hline
+\end{tabular}
+\end{table}
